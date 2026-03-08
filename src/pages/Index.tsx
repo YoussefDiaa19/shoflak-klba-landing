@@ -5,7 +5,7 @@ import PhoneMockup from "@/components/PhoneMockup";
 import appLogo from "@/assets/app-logo-cropped.png";
 
 const Logo = ({ className = "text-lg" }: { className?: string }) => (
-  <span className={`font-black tracking-tight ${className}`}>
+  <span className={`tracking-tight ${className}`} style={{ fontFamily: "'Rubik', sans-serif", fontWeight: 900 }}>
     <span className="text-foreground">Shoflak</span>{" "}
     <span className="text-[#D4A04A]">Klba</span>
   </span>
