@@ -154,7 +154,7 @@ const Index = () => {
                 Find your pet's perfect match
               </h1>
               <p className="text-foreground/60 text-lg md:text-xl max-w-lg mb-8">
-                Get the app and find the ideal partner for your furry companion
+                Get the app and find the ideal partner for your beloved pet
               </p>
               <div className="flex flex-row gap-3 justify-center md:justify-start flex-wrap" id="download">
                 <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-all hover:scale-[1.02]">
