@@ -3,7 +3,13 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import PhoneMockup from "@/components/PhoneMockup";
 import appLogo from "@/assets/app-logo-cropped.png";
-import logoText from "@/assets/logo-text.png";
+
+const Logo = ({ className = "text-lg" }: { className?: string }) => (
+  <span className={`font-black tracking-tight ${className}`}>
+    <span className="text-foreground">Shoflak</span>{" "}
+    <span className="text-[#D4A04A]">Klba</span>
+  </span>
+);
 import screenshotHome from "@/assets/screenshot-home.png";
 import screenshotMessages from "@/assets/screenshot-messages.png";
 import screenshotFavorites from "@/assets/screenshot-favorites.png";
