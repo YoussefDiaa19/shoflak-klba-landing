@@ -51,19 +51,25 @@ const Index = () => {
       }} />
 
       {/* Nav */}
-      <nav className="relative z-10 flex items-center justify-between px-6 py-5 max-w-6xl mx-auto">
-        <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-xl gradient-primary flex items-center justify-center">
-            <Heart className="w-4.5 h-4.5 text-primary-foreground" fill="currentColor" />
+      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+        <div className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
+          <div className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-xl gradient-primary flex items-center justify-center">
+              <Heart className="w-4.5 h-4.5 text-primary-foreground" fill="currentColor" />
+            </div>
+            <span className="font-display text-xl font-bold text-foreground">Shoflak Klba</span>
           </div>
-          <span className="font-display text-xl font-bold text-foreground">Shoflak Klba</span>
+          <div className="flex items-center gap-6">
+            <a href="#features" className="hidden sm:inline text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Features</a>
+            <a href="#screenshots" className="hidden sm:inline text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Screenshots</a>
+            <a
+              href="#download"
+              className="gradient-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity"
+            >
+              Download
+            </a>
+          </div>
         </div>
-        <a
-          href="#download"
-          className="gradient-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-full text-sm hover:opacity-90 transition-opacity"
-        >
-          Download
-        </a>
       </nav>
 
       {/* Hero */}
@@ -76,7 +82,7 @@ const Index = () => {
             </div>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-6">
               Find Your Pet's
-              <span className="block gradient-primary bg-clip-text text-transparent">
+              <span className="block text-primary">
                 Perfect Match
               </span>
             </h1>
@@ -96,7 +102,7 @@ const Index = () => {
       </section>
 
       {/* Features */}
-      <section className="relative z-10 bg-card border-y border-border/50">
+      <section id="features" className="relative z-10 bg-card border-y border-border/50">
         <div className="max-w-6xl mx-auto px-6 py-24">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -124,7 +130,7 @@ const Index = () => {
       </section>
 
       {/* App Screenshots */}
-      <section className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+      <section id="screenshots" className="relative z-10 max-w-6xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             Take a Peek Inside
