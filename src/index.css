@@ -79,6 +79,14 @@
   }
 }
 
+.hero-gradient {
+  background: 
+    radial-gradient(ellipse at 20% 50%, hsl(30 70% 85% / 0.6), transparent 60%),
+    radial-gradient(ellipse at 80% 50%, hsl(40 80% 80% / 0.5), transparent 60%),
+    radial-gradient(ellipse at 50% 80%, hsl(15 60% 85% / 0.4), transparent 50%),
+    hsl(30 30% 95%);
+}
+
 @layer utilities {
   .gradient-hero {
     background: var(--gradient-hero);
