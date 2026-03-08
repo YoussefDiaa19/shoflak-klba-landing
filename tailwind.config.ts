@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Fredoka', 'sans-serif'],
+        body: ['Nunito', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -46,6 +50,13 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        warm: {
+          gold: "hsl(var(--warm-gold))",
+          amber: "hsl(var(--warm-amber))",
+          orange: "hsl(var(--warm-orange))",
+          cream: "hsl(var(--warm-cream))",
+          brown: "hsl(var(--warm-brown))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
