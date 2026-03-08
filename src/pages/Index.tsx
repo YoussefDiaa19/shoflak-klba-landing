@@ -171,7 +171,7 @@ const Index = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             >
-              <img src={screenshotHome} alt="Shoflak Klba home screen" className="w-full h-auto rounded-3xl shadow-phone" />
+              <img src={screenshotHome} alt="Shoflak Klba home screen" className="w-full h-auto" />
             </motion.div>
           </div>
         </div>
@@ -226,7 +226,7 @@ const Index = () => {
             ].map((item, i) => (
               <FadeInSection key={item.label} delay={i * 0.1}>
                 <div className={`flex flex-col items-center ${i % 2 === 0 ? "animate-float" : "animate-float-delayed"}`}>
-                  <PhoneMockup screenshot={item.img} alt={item.alt} className="max-w-[160px] sm:max-w-[180px] lg:max-w-[220px]" />
+                  <img src={item.img} alt={item.alt} className="w-full h-auto max-w-[160px] sm:max-w-[180px] lg:max-w-[220px]" />
                   <p className="text-center mt-4 text-xs sm:text-sm font-semibold text-muted-foreground tracking-wide uppercase">
                     {item.label}
                   </p>
