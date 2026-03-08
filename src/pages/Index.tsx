@@ -1,4 +1,5 @@
-import { Heart, MessageCircle, Search, Shield, Star } from "lucide-react";
+import { Heart, MessageCircle, Search, Shield, Star, Menu, X } from "lucide-react";
+import { useState } from "react";
 import PhoneMockup from "@/components/PhoneMockup";
 import screenshotHome from "@/assets/screenshot-home.png";
 import screenshotMessages from "@/assets/screenshot-messages.png";
@@ -64,14 +65,68 @@ const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => 
   }
 };
 
+const MobileSidebar = ({ open, onClose }: { open: boolean; onClose: () => void }) => {
+  if (!open) return null;
+
+  return (
+    <>
+      {/* Backdrop */}
+      <div className="fixed inset-0 bg-foreground/40 z-40 backdrop-blur-sm" onClick={onClose} />
+      {/* Sidebar panel */}
+      <div className="fixed top-0 left-0 h-full w-64 bg-card z-50 shadow-card p-6 flex flex-col gap-6 animate-in slide-in-from-left duration-300">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Heart className="w-5 h-5 text-foreground" fill="currentColor" />
+            <span className="font-display text-lg font-bold text-foreground">Shoflak Klba</span>
+          </div>
+          <button onClick={onClose} className="p-1 rounded-lg hover:bg-muted transition-colors">
+            <X className="w-5 h-5 text-foreground" />
+          </button>
+        </div>
+        <nav className="flex flex-col gap-1">
+          {[
+            { label: "Features", id: "features" },
+            { label: "Screenshots", id: "screenshots" },
+            { label: "About", id: "about" },
+            { label: "Download", id: "download" },
+          ].map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              onClick={(e) => {
+                scrollToSection(e, item.id);
+                onClose();
+              }}
+              className="px-4 py-3 rounded-xl text-foreground/70 hover:text-foreground hover:bg-muted/50 transition-colors font-medium text-sm"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </>
+  );
+};
+
 const Index = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-muted/30">
+      <MobileSidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
       {/* Hero section with gradient bg */}
       <div className="relative mx-4 mt-4 rounded-[2rem] overflow-hidden hero-gradient">
         {/* Nav */}
         <nav className="relative z-20 flex items-center justify-between px-6 md:px-12 py-5 max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="md:hidden p-1 rounded-lg hover:bg-foreground/10 transition-colors mr-1"
+            >
+              <Menu className="w-6 h-6 text-foreground" />
+            </button>
             <Heart className="w-6 h-6 text-foreground" fill="currentColor" />
             <span className="font-display text-lg font-bold text-foreground">Shoflak Klba</span>
           </div>
@@ -80,7 +135,7 @@ const Index = () => {
             <a href="#screenshots" onClick={(e) => scrollToSection(e, "screenshots")} className="text-sm text-foreground/70 hover:text-foreground transition-colors">Screenshots</a>
             <a href="#about" onClick={(e) => scrollToSection(e, "about")} className="text-sm text-foreground/70 hover:text-foreground transition-colors">About</a>
           </div>
-          <a href="#download" onClick={(e) => scrollToSection(e, "download")} className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
+          <a href="#download" onClick={(e) => scrollToSection(e, "download")} className="hidden md:block text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
             Download
           </a>
         </nav>
@@ -147,7 +202,7 @@ const Index = () => {
               Browse pets, chat with owners, save favorites, and manage your profile.
             </p>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 max-w-md lg:max-w-none mx-auto">
             {[
               { img: screenshotHome, label: "Browse", alt: "Home screen" },
               { img: screenshotMessages, label: "Chat", alt: "Messages screen" },
