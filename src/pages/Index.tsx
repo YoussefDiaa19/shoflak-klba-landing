@@ -171,7 +171,7 @@ const Index = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             >
-              <PhoneMockup screenshot={screenshotHome} alt="Shoflak Klba home screen" />
+              <img src={screenshotHome} alt="Shoflak Klba home screen" className="w-full h-auto rounded-3xl shadow-phone" />
             </motion.div>
           </div>
         </div>
