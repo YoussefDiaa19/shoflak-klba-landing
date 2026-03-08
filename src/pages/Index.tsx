@@ -33,15 +33,20 @@ const StoreBadge = ({ type }: { type: "apple" | "google" }) => (
     href={type === "apple" ? "https://apps.apple.com" : "https://play.google.com"}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center gap-3 bg-foreground text-background rounded-2xl px-6 py-3.5 hover:opacity-90 transition-all hover:scale-[1.02]"
+    className="inline-flex items-center gap-3 bg-foreground text-background rounded-xl px-5 py-3 hover:opacity-90 transition-all hover:scale-[1.02]"
   >
     {type === "apple" ? (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
       </svg>
     ) : (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.396 13l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z" />
+      <svg className="w-6 h-6" viewBox="0 0 512 512">
+        <path fill="#2196F3" d="M325.3 234.3L104.6 13l280.8 161.2z" />
+        <path fill="#4CAF50" d="M47 0C34 6.8 25.3 19.2 25.3 35v441.9c0 15.8 8.7 28.2 21.7 35L304.6 256z" />
+        <path fill="#F44336" d="M304.6 256L47 512l257.6-148.3L385.4 317z" />
+        <path fill="#FFC107" d="M486.8 234.3c-11.6-6.7-40.8-23.4-76.4-44.1L325.3 234.3 385.4 317l101.4-58.3c14.6-8.4 14.6-15.9 0-24.4z" />
+        <path fill="#4CAF50" d="M104.6 13L325.3 234.3l60.1-44.1L104.6 13z" />
+        <path fill="#F44336" d="M325.3 277.7L104.6 499l280.8-161.2L325.3 277.7z" />
       </svg>
     )}
     <div className="text-left">
@@ -51,43 +56,54 @@ const StoreBadge = ({ type }: { type: "apple" | "google" }) => (
   </a>
 );
 
+const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-muted/30">
       {/* Hero section with gradient bg */}
       <div className="relative mx-4 mt-4 rounded-[2rem] overflow-hidden hero-gradient">
         {/* Nav */}
-        <nav className="relative z-20 flex items-center justify-between px-8 md:px-12 py-5 max-w-7xl mx-auto">
+        <nav className="relative z-20 flex items-center justify-between px-6 md:px-12 py-5 max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
             <Heart className="w-6 h-6 text-foreground" fill="currentColor" />
             <span className="font-display text-lg font-bold text-foreground">Shoflak Klba</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Features</a>
-            <a href="#screenshots" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Screenshots</a>
-            <a href="#about" className="text-sm text-foreground/70 hover:text-foreground transition-colors">About</a>
+            <a href="#features" onClick={(e) => scrollToSection(e, "features")} className="text-sm text-foreground/70 hover:text-foreground transition-colors">Features</a>
+            <a href="#screenshots" onClick={(e) => scrollToSection(e, "screenshots")} className="text-sm text-foreground/70 hover:text-foreground transition-colors">Screenshots</a>
+            <a href="#about" onClick={(e) => scrollToSection(e, "about")} className="text-sm text-foreground/70 hover:text-foreground transition-colors">About</a>
           </div>
-          <a href="#download" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
+          <a href="#download" onClick={(e) => scrollToSection(e, "download")} className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
             Download
           </a>
         </nav>
 
-        {/* Hero content */}
-        <div className="relative z-10 text-center px-6 pt-16 md:pt-24 pb-0">
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] tracking-tight max-w-3xl mx-auto mb-6">
-            Find your pet's perfect match
-          </h1>
-          <p className="text-foreground/60 text-lg md:text-xl max-w-lg mx-auto mb-10">
-            Get the app and find the ideal partner for your furry companion
-          </p>
-          <div className="flex flex-row gap-3 justify-center mb-16" id="download">
-            <StoreBadge type="apple" />
-            <StoreBadge type="google" />
-          </div>
+        {/* Hero content - side by side */}
+        <div className="relative z-10 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-12 md:pt-20 pb-0">
+            {/* Left: Text */}
+            <div className="flex-1 text-center md:text-left pb-8 md:pb-20">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.05] tracking-tight mb-6">
+                Find your pet's perfect match
+              </h1>
+              <p className="text-foreground/60 text-lg md:text-xl max-w-lg mb-8">
+                Get the app and find the ideal partner for your furry companion
+              </p>
+              <div className="flex flex-row gap-3 justify-center md:justify-start flex-wrap" id="download">
+                <StoreBadge type="apple" />
+                <StoreBadge type="google" />
+              </div>
+            </div>
 
-          {/* Phone mockup - centered, partially visible */}
-          <div className="flex justify-center">
-            <div className="w-[260px] md:w-[280px]">
+            {/* Right: Phone mockup */}
+            <div className="flex-shrink-0 w-[240px] md:w-[280px]">
               <PhoneMockup screenshot={screenshotHome} alt="Shoflak Klba home screen" />
             </div>
           </div>
@@ -95,7 +111,7 @@ const Index = () => {
       </div>
 
       {/* Features */}
-      <section id="features" className="max-w-7xl mx-auto px-6 md:px-12 py-24">
+      <section id="features" className="max-w-7xl mx-auto px-6 md:px-12 py-24 scroll-mt-8">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
             Why pet owners love us
@@ -121,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* App Screenshots */}
-      <section id="screenshots" className="mx-4 rounded-[2rem] bg-card border border-border/30">
+      <section id="screenshots" className="mx-4 rounded-[2rem] bg-card border border-border/30 scroll-mt-8">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-24">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
@@ -131,7 +147,7 @@ const Index = () => {
               Browse pets, chat with owners, save favorites, and manage your profile.
             </p>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
             {[
               { img: screenshotHome, label: "Browse", alt: "Home screen" },
               { img: screenshotMessages, label: "Chat", alt: "Messages screen" },
@@ -150,7 +166,7 @@ const Index = () => {
       </section>
 
       {/* Stats */}
-      <section id="about" className="max-w-5xl mx-auto px-6 md:px-12 py-24">
+      <section id="about" className="max-w-5xl mx-auto px-6 md:px-12 py-24 scroll-mt-8">
         <div className="bg-foreground text-background rounded-3xl p-10 md:p-16 text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 tracking-tight">
             Growing every day
@@ -185,7 +201,7 @@ const Index = () => {
         <p className="text-muted-foreground max-w-md mx-auto mb-10">
           Download Shoflak Klba today and let your pet meet their soulmate.
         </p>
-        <div className="flex flex-row gap-3 justify-center">
+        <div className="flex flex-row gap-3 justify-center flex-wrap">
           <StoreBadge type="apple" />
           <StoreBadge type="google" />
         </div>
