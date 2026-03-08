@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import PhoneMockup from "@/components/PhoneMockup";
 import appLogo from "@/assets/app-logo-cropped.png";
+import logoText from "@/assets/logo-text.png";
 import screenshotHome from "@/assets/screenshot-home.png";
 import screenshotMessages from "@/assets/screenshot-messages.png";
 import screenshotFavorites from "@/assets/screenshot-favorites.png";
