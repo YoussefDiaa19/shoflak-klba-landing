@@ -51,8 +51,8 @@ const sections: LegalSection[] = [
   },
   {
     title: "11. Account Deletion",
-    paragraphs: ["Users may delete their accounts through the App.", "Upon deletion:"],
-    bullets: ["Profile information may be removed", "Pet listings may be deleted", "Uploaded content may be removed", "Some information may remain temporarily in backups or where legally required."],
+    paragraphs: ["Users may delete their accounts through the App.", "Deleted accounts cannot be restored or reactivated.", "If a user attempts to sign in again using a previously deleted account, access may be denied and the user may be required to create a new account.", "Upon deletion:"],
+    bullets: ["Profile information is removed from public view", "Pet listings are deleted", "Uploaded pet content is removed from public view", "Existing chats may remain visible to other users", "Deleted accounts may appear as “Deleted User” within conversations", "Certain account records may remain internally stored for security, moderation, fraud prevention, legal obligations, or system integrity purposes", "Some information may also remain temporarily in backups where legally required or necessary for system operations."],
   },
   {
     title: "12. Intellectual Property",
