@@ -5,11 +5,11 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import PhoneMockup from "@/components/PhoneMockup";
 import appLogo from "@/assets/app-logo-cropped.png";
-import logoText from "@/assets/logo-text.png";
-import screenshotHome from "@/assets/screenshot-home.png";
-import screenshotMessages from "@/assets/screenshot-messages.png";
-import screenshotFavorites from "@/assets/screenshot-favorites.png";
-import screenshotProfile from "@/assets/screenshot-profile.png";
+import logoText from "@/assets/Copy of Shoflak Klba (3)-Photoroom.png";
+import screenshotHome from "@/assets/newHome.png";
+import screenshotMessages from "@/assets/chat.png";
+import screenshotFavorites from "@/assets/favvv.png";
+import screenshotProfile from "@/assets/newMyprofile.png";
 import appStoreBadge from "@/assets/app-store-badge.svg";
 import googlePlayBadge from "@/assets/google-play-badge.svg";
 
@@ -93,7 +93,7 @@ const MobileSidebar = ({ open, onClose }: { open: boolean; onClose: () => void }
       <div className="fixed top-0 left-0 h-full w-64 bg-card z-50 shadow-card p-6 flex flex-col gap-6 animate-in slide-in-from-left duration-300">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logoText} alt="Shoflak Klba" className="h-7 object-contain" />
+            <img src={logoText} alt="Shoflak Klba" className="h-12 object-contain" />
           </div>
           <button onClick={onClose} className="p-1 rounded-lg hover:bg-muted transition-colors">
             <X className="w-5 h-5 text-foreground" />
@@ -141,7 +141,7 @@ const Index = () => {
             >
               <Menu className="w-6 h-6 text-foreground" />
             </button>
-            <img src={logoText} alt="Shoflak Klba" className="h-8 object-contain" />
+            <img src={logoText} alt="Shoflak Klba" className="h-14 object-contain" />
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" onClick={(e) => scrollToSection(e, "features")} className="text-sm text-foreground/70 hover:text-foreground transition-colors">Features</a>
@@ -191,7 +191,7 @@ const Index = () => {
               </div>
             </motion.div>
             <motion.div
-              className="flex-shrink-0 w-[240px] md:w-[280px]"
+              className="flex-shrink-0 w-[240px] md:w-[310px]"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
@@ -289,7 +289,7 @@ const Index = () => {
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo left */}
             <div className="flex items-center gap-2 z-10">
-              <img src={logoText} alt="Shoflak Klba" className="h-5 object-contain" />
+              <img src={logoText} alt="Shoflak Klba" className="h-9 object-contain" />
             </div>
 
             {/* Social icons centered (absolute on md+ to align with copyright) */}

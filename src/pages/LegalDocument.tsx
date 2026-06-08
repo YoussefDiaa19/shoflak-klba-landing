@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import logoText from "@/assets/logo-text.png";
+import logoText from "@/assets/Copy of Shoflak Klba (3)-Photoroom.png";
 
 export type LegalSubsection = {
   title: string;
