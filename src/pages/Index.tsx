@@ -117,6 +117,13 @@ const MobileSidebar = ({ open, onClose }: { open: boolean; onClose: () => void }
               {item.label}
             </a>
           ))}
+          <Link
+            to="/support"
+            onClick={onClose}
+            className="px-4 py-3 rounded-xl text-foreground/70 hover:text-foreground hover:bg-muted/50 transition-colors font-medium text-sm"
+          >
+            Support
+          </Link>
         </nav>
       </div>
     </>
@@ -146,6 +153,7 @@ const Index = () => {
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" onClick={(e) => scrollToSection(e, "features")} className="text-sm text-foreground/70 hover:text-foreground transition-colors">Features</a>
             <a href="#screenshots" onClick={(e) => scrollToSection(e, "screenshots")} className="text-sm text-foreground/70 hover:text-foreground transition-colors">Screenshots</a>
+            <Link to="/support" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Support</Link>
           </div>
           <div className="hidden md:flex items-center gap-3">
             <SocialIcon href="https://www.instagram.com/shoflakklba/" label="Instagram">
