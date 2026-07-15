@@ -56,6 +56,20 @@ const Support = () => {
               </a>
             </div>
 
+            {/* Account Deletion */}
+            <div className="mt-10 space-y-4">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight">Account Deletion</h2>
+              <p className="text-base leading-7 text-foreground/80">
+                If you'd like to delete your account and all associated data, please send us an email at the address below and we'll process your request within 7 business days:
+              </p>
+              <a
+                href="mailto:shoflakklba@gmail.com"
+                className="inline-flex items-center gap-2 text-base font-medium text-primary hover:underline"
+              >
+                shoflakklba@gmail.com
+              </a>
+            </div>
+
             {/* Socials */}
             <div className="mt-10 space-y-4">
               <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight">Find Us On</h2>
