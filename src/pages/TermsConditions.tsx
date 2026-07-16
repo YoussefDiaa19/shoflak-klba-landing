@@ -90,6 +90,46 @@ const sections: LegalSection[] = [
     paragraphs: ["If you have questions about these Terms and Conditions, you may contact:"],
     bullets: ["Youssef Diaa", "Email: youssefdiaa19@gmail.com"],
   },
+  {
+    title: "20. Child Safety & CSAE Policy",
+    paragraphs: [
+      "Shoflak Klba has a strict zero-tolerance policy toward any content or behavior that sexually exploits or abuses minors (CSAE). The safety and protection of children is a non-negotiable priority for this platform.",
+      "The following content and behaviors are strictly prohibited:",
+    ],
+    bullets: [
+      "Uploading, sharing, transmitting, or soliciting any content that sexually exploits or abuses minors in any form",
+      "Grooming, targeting, or attempting to establish inappropriate relationships with minors",
+      "Using the App in any manner that endangers the safety or wellbeing of a child",
+      "Any communication, image, video, or other material that depicts or promotes child sexual abuse or exploitation",
+    ],
+    subsections: [
+      {
+        title: "Reporting",
+        paragraphs: [
+          "If you encounter any content or behavior that you believe involves the sexual exploitation or abuse of a minor, please report it immediately through the in-app reporting feature or by contacting us directly at shoflakklba@gmail.com.",
+          "We take all such reports seriously and will act on them promptly.",
+        ],
+      },
+      {
+        title: "Enforcement",
+        paragraphs: [
+          "Any user found to be in violation of this policy will have their account immediately and permanently terminated.",
+          "We will report confirmed cases of child sexual abuse material (CSAM) or exploitation to the appropriate authorities, including the National Center for Missing and Exploited Children (NCMEC) and/or local law enforcement.",
+        ],
+      },
+      {
+        title: "Moderation",
+        paragraphs: [
+          "All pet listings and user-submitted content are subject to review and approval. We actively monitor for violations of this policy and will take swift action to remove harmful content and ban offending accounts.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "21. Contact Information",
+    paragraphs: ["If you have questions about these Terms and Conditions, you may contact:"],
+    bullets: ["Youssef Diaa", "Email: youssefdiaa19@gmail.com"],
+  },
 ];
 
 const TermsConditions = () => (

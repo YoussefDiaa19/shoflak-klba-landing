@@ -54,7 +54,7 @@ const LegalDocument = ({ title, effectiveDate, intro, sections }: LegalDocumentP
 
             <div className="mt-10 space-y-8">
               {sections.map((section) => (
-                <section key={section.title} className="space-y-4">
+                <section key={section.title} className="space-y-4" id={section.title.toLowerCase().includes("child safety") ? "child-safety" : undefined}>
                   <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight">
                     {section.title}
                   </h2>
