@@ -190,10 +190,10 @@ const Index = () => {
                 Get the app and find the ideal partner for your beloved pet
               </p>
               <div className="flex flex-row gap-3 justify-center md:justify-start flex-wrap" id="download">
-                <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-all hover:scale-[1.02]">
+                <a href="https://apps.apple.com/app/id6789725634" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-all hover:scale-[1.02]">
                   <img src={appStoreBadge} alt="Download on the App Store" className="h-[44px]" />
                 </a>
-                <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-all hover:scale-[1.02]">
+                <a href="https://play.google.com/store/apps/details?id=com.shoflakklba.app&hl=en-US&ah=uLclBmJRKdjMNK7S0tN5oosIX3U" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-all hover:scale-[1.02]">
                   <img src={googlePlayBadge} alt="Get it on Google Play" className="h-[44px]" />
                 </a>
               </div>
@@ -280,10 +280,10 @@ const Index = () => {
             Download Shoflak Klba today and let your pet meet their soulmate.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
-            <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-all hover:scale-[1.02]">
+            <a href="https://apps.apple.com/app/id6789725634" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-all hover:scale-[1.02]">
               <img src={appStoreBadge} alt="Download on the App Store" className="h-[44px]" />
             </a>
-            <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-all hover:scale-[1.02]">
+            <a href="https://play.google.com/store/apps/details?id=com.shoflakklba.app&hl=en-US&ah=uLclBmJRKdjMNK7S0tN5oosIX3U" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-all hover:scale-[1.02]">
               <img src={googlePlayBadge} alt="Get it on Google Play" className="h-[44px]" />
             </a>
           </div>
